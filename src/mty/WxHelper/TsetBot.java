@@ -12,7 +12,7 @@ public class TsetBot extends WeChatBot {
     }
     @Bind(msgType = MsgType.TEXT)
     public void handleText(WeChatMessage message) {
-            log.info("接收到 [{}] 的消息: {}", message.getName(), message.getText());
+            /*log.info("接收到 [{}] 的消息: {}", message.getName(), message.getText());*/
             this.sendMsg(message.getFromUserName(), "自动回复: " + message.getText());
     }
 

@@ -1,5 +1,6 @@
 package mty.WxHelper;
 
+import itchat4j.Wechat;
 import mty.websocket.MsgData.MsgData_Login_Client;
 
 import java.awt.*;
@@ -12,9 +13,9 @@ import java.nio.channels.NotYetConnectedException;
 public class MainApp {
 
     public static void initFrame() {
-        Frame frame = new Frame("摩天游小助手mty");
-        Button btnEnd = new Button("关闭close");
-        Button btnStart = new Button("登录login");
+        Frame frame = new Frame("摩天游小助手");
+        Button btnEnd = new Button("关闭");
+        Button btnStart = new Button("登录");
         Button btnSendsg = new Button("发送消息");
         Label lblUin = new Label("微信唯一编号：");
         TextField txtUin = new TextField(50);
@@ -51,16 +52,16 @@ public class MainApp {
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
                 //执行开启微信机器人的代码：
-//				Wechat wechat;
-//				String qrPath = "D://itchat4j//login"; // 保存登陆二维码图片的路径，这里需要在本地新建目录
-//				IMsgHandlerFace msgHandler = new SimpleHandler(); // 实现IMsgHandlerFace接口的类
-//				wechat = new Wechat(msgHandler, qrPath); //【注入】
-//				wechat.start(); // 启动服务，会在qrPath下生成一张二维码图片，扫描即可登陆，
-//								//注意，二维码图片如果超过一定时间未扫描会过期，过期时会自动更新，所以你可能需要重新打开图片
+				/*Wechat wechat;
+				String qrPath = "D://itchat4j//login"; // 保存登陆二维码图片的路径，这里需要在本地新建目录
+				IMsgHandlerFace msgHandler = new SimpleHandler(); // 实现IMsgHandlerFace接口的类
+				wechat = new Wechat(msgHandler, qrPath); //【注入】
+				wechat.start(); // 启动服务，会在qrPath下生成一张二维码图片，扫描即可登陆，
+								//注意，二维码图片如果超过一定时间未扫描会过期，过期时会自动更新，所以你可能需要重新打开图片
 
-//				Core core = Core.getInstance();
-//				Integer mLogerUid=(Integer)core.getUserSelf().get("Uin");
-//				globalVar.mUin=mLogerUid;
+				Core core = Core.getInstance();
+				Integer mLogerUid=(Integer)core.getUserSelf().get("Uin");
+				globalVar.mUin=mLogerUid;*/
                 globalVar.mUin = 1111111111;
 
                 //连接  webSocket客户端
@@ -113,8 +114,8 @@ public class MainApp {
     }
 
     public static void main(String[] args) {
-        System.out.println("测试中文乱码问题adbasdads");
+        System.out.println("ssssssssss");
         initFrame();
-
     }
+
 }
